@@ -15,7 +15,7 @@ module PostBin
     Pathname.new(File.expand_path(File.dirname(__FILE__)))
   end
   
-  DataMapper.setup(:default, DATABASE_URL)
+  DataMapper.setup(:default, 'postgres://dxcjbbdsilemfl:gD9zdRl0Xnv27oBPKKbmH_9AP5@ec2-54-243-179-133.compute-1.amazonaws.com:5432/d5uqkh8a0uus1o')
   
   Dir[PostBin.current_path + "models/*.rb"].each { |f| require f }
   
